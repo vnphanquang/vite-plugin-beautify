@@ -10,7 +10,7 @@
 
 > 💡 You shouldn't be beautifying your output. Always minify if possible. But sometimes you just need to, and that's when this plugin comes in handy.
 
-> 💡 Be aware that [vite] does provide a [`minifiy` build option][vite.build.options.minify]. You can turn it off `minify: false`, but the output won't look be super legible.
+> 💡 Be aware that [vite] does provide a [`minifiy` build option][vite.build.options.minify]. You can turn it off `minify: false`, but the output won't be super legible.
 
 ## Table of Contents
 
@@ -24,31 +24,29 @@
 
 1. Install the package
 
-    ```bash
-    npm install -D vite-plugin-beautify
-    ```
+   ```bash
+   npm install -D vite-plugin-beautify
+   ```
 
-    ```bash
-    yarn add -D vite-plugin-beautify
-    ```
+   ```bash
+   yarn add -D vite-plugin-beautify
+   ```
 
-    ```bash
-    pnpm add -D vite-plugin-beautify
-    ```
+   ```bash
+   pnpm add -D vite-plugin-beautify
+   ```
 
 2. Add to your `vite.config.ts`
 
-    ```typescript
-    // vite.config.ts
-    import { defineConfig } from 'vite';
-    import beautify from 'vite-plugin-beautify';
+   ```typescript
+   // vite.config.ts
+   import { defineConfig } from 'vite';
+   import beautify from 'vite-plugin-beautify';
 
-    export default defineConfig({
-      plugins: [
-        beautify({ inDir: 'build' }),
-      ],
-    });
-    ```
+   export default defineConfig({
+     plugins: [beautify({ inDir: 'build' })],
+   });
+   ```
 
 ## Configuration
 
@@ -71,7 +69,7 @@ export default defineConfig({
         enabled: false,
       },
       js: {
-        glob: 'immutable/**/*.js'
+        glob: 'immutable/**/*.js',
       },
       css: {
         options: {
@@ -121,11 +119,11 @@ export default defineConfig({
 [js-beautify]: https://github.com/beautify-web/js-beautify
 
 <!-- heading badge -->
+
 [license.badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license]: ./LICENSE
 [npm.badge]: https://img.shields.io/npm/v/vite-plugin-beautify
 [npm]: https://www.npmjs.com/package/vite-plugin-beautify
 [bundlephobia.badge]: https://img.shields.io/bundlephobia/minzip/vite-plugin-beautify?label=minzipped
 [bundlephobia]: https://bundlephobia.com/package/vite-plugin-beautify
-
 [defaults]: https://github.com/vnphanquang/vite-plugin-beautify/blob/main/src/plugin.constants.ts
