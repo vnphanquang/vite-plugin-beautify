@@ -1,0 +1,61 @@
+{
+  "name": "vite-plugin-beautify",
+  "version": "0.0.0",
+  "description": "beautify output with js-beautify",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "format": "prettier . --check --plugin-search-dir=. \"./**/*.{ts,js,cjs,json}\"",
+    "ci:version": "changeset version",
+    "ci:publish": "pnpm build && changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnphanquang/vite-plugin-beautify.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "vite",
+    "beautify",
+    "output",
+    "build",
+    "plugin"
+  ],
+  "author": "Quang Phan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnphanquang/vite-plugin-beautify/issues"
+  },
+  "homepage": "https://github.com/vnphanquang/vite-plugin-beautify#readme",
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.7",
+    "@changesets/cli": "^2.25.0",
+    "@types/glob": "^8.0.0",
+    "@types/js-beautify": "^1.13.3",
+    "@types/node": "^18.8.2",
+    "@vnphanquang/eslint-config": "^1.1.2",
+    "@vnphanquang/prettierrc": "^1.0.0",
+    "eslint": "^8.24.0",
+    "prettier": "^2.7.1",
+    "tslib": "^2.4.0",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.4"
+  },
+  "engines": {
+    "pnpm": ">=7.6.0",
+    "node": ">=16.17.0"
+  },
+  "packageManager": "pnpm@7.6.0",
+  "dependencies": {
+    "glob": "^8.0.3",
+    "js-beautify": "^1.14.6"
+  }
+}
